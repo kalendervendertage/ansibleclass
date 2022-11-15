@@ -9,6 +9,10 @@
       path: /usr/local/aws-cli
     register: awsinstallfile
 
+  - name: Debug aws-cli install
+    ansible.builtin.debug:
+      msg: "{{ awsinstallfile }}"
+
   - name: Install aws-cli
     ansible.builtin.shell: |
       ~/aws/install
